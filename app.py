@@ -43,9 +43,9 @@ def seqValidator(seq):
 final_df = pd.DataFrame(columns=['Specie Name', 'Sub Sequence','Location','Label'])
 seq = ""
 len_seq = 0
-image = Image.open('img3.jpg')
+image = Image.open('c.jpg')
 st.subheader("""DeepAce""")
-st.image(image, use_column_width=True)
+st.image(image)
 st.sidebar.subheader(("Input Sequence(s) (FASTA FORMAT ONLY)"))
 fasta_string  = st.sidebar.text_area("Sequence Input", height=200)       
 st.subheader("Click the Example Button for Sample Data")
