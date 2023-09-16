@@ -40,7 +40,7 @@ def seqValidator(seq):
     return False
 
 
-final_df = pd.DataFrame(columns=['Specie Name', 'Sub Sequence','Location','Label'])
+final_df = pd.DataFrame(columns=['Specie Name', 'Sub Sequence','Label'])
 seq = ""
 len_seq = 0
 image = Image.open('c.jpg')
@@ -87,7 +87,7 @@ if st.sidebar.button("SUBMIT"):
                 if i % 41 == 0 :
                     sub_seq = seq[i-41:i]
                     print(sub_seq)
-                    df_temp = pd.DataFrame([[seq_id, sub_seq,str(i+1-20),'None']], columns=['Specie Name', 'Sub Sequence','Location','Label'] )
+                    df_temp = pd.DataFrame([[seq_id, sub_seq,str(i+1-20),'None']], columns=['Specie Name', 'Sub Sequence','Label'] )
                     final_df = pd.concat([final_df,df_temp], ignore_index=True)
         else:
             st.info("Sequence with Specie Name: " + str(seq_id) + " is invalid, containing letters other than standard amino acids")
