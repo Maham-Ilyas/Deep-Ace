@@ -1,4 +1,3 @@
-pip install --upgrade "protobuf<=3.20.1"
 from io import StringIO
 from Bio import SeqIO
 import pandas as pd
